@@ -162,10 +162,9 @@ export function RegisterAfter({
                 <GithubProvider />
               ) : (
                 <div className="gap-[8px] flex">
-                  {genericOauth && isGeneral ? (
-                    <OauthProvider />
-                  ) : (
-                  )}
+                  {genericOauth && isGeneral && (
+    <OauthProvider />
+)}
                   {!!neynarClientId && <FarcasterProvider />}
                   {billingEnabled && <WalletProvider />}
                 </div>
